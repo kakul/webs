@@ -1,0 +1,177 @@
+@keyframes fader{
+	
+	0%{opacity:1;}
+	100%{opacity:0;}
+
+}
+
+@keyframes appear{
+	0%{opacity:0;}
+	100%{opacity:1;}
+}
+
+@keyframes movex{
+	0%{
+		width:50%;
+		height:50%;
+		transform:translateX(165px);
+		opacity: 0;
+	}
+		100%{
+			width: 100%
+			height:100%;
+			transfrom:translateX(10px);
+			opacity: 1;
+			z-index: 1;
+		}
+	
+}
+
+.appear3 {
+  animation: moveY 2s forwards;
+  
+}
+
+@keyframes moveY {
+  0% {
+  	opacity:0;
+  	transform: translateY(10px);}
+  100% {
+  	opacity:1;
+  	transform: translateY(30px);}
+}
+
+.fade{
+	animation:fader 2s forwards;
+	
+}
+
+.appear{
+	animation:appear 2s forwards;
+	z-index: 1;
+}
+
+.appear2{
+	
+	
+	animation:movex 1s forwards;
+}
+
+.appear4{
+	animation:moveY 1s forwards;
+}
+
+@keyframes drop{
+	0% {opacity:0;
+		transform:translateY(1.0);}
+	50%{transform:scale(1.5);}
+	100%{opacity:1;
+		transform:scale:(1.0); }
+}
+
+.appear5{
+	animation:drop 2s forwards;
+}
+
+html{
+	width:100%;
+	height:100%;
+	background-color: #000000;
+}
+
+.back{
+	
+	width:100%;
+	height:100%;
+	position:absolute;
+	margin-top:10%;
+	margin-left:15%;
+}
+
+.naruto{
+	opacity: 0;
+	width:512px;
+	height:369;
+	z-index:0;
+	position: absolute;
+}
+
+#page-1{
+	width:728px;
+	height:1065px;
+	position:absolute;
+	z-index:-1;
+	background-color: #FFFFFF;
+	opacity:0;
+	margin-left: 23%;
+}
+
+#intro{
+	width:1024px;
+	height:768px;
+	position:absolute;
+
+}
+
+.f1{margin-left: 2%;
+	margin-top: 2%;
+	opacity:0; 
+	display:block;
+	z-index: 2;
+}
+
+.f2,.f4{
+    opacity:0;
+    float:right;
+    z-index:2;
+    margin-right:5%;
+
+      }
+
+
+.f3{
+    opacity:0;
+    float:left;
+    z-index:2;
+    margin-left:5%;
+       }
+.f4,.f5{
+	vertical-align: bottom;
+	margin-bottom: 1%;
+	margin-top:10%;
+	opacity:0;
+}
+
+.f5{
+	float:left;
+	z-index:2;
+	margin-left: 5%;
+	margin-top: 6%;
+	opacity:0;
+	vertical-align: bottom;
+}
+.sasuke{
+	opacity: 0;
+	width:512px;
+	height:369;
+	z-index:0;
+	float:right;
+	position: absolute;
+	margin-top: 9%;
+	margin-left:80%; 
+}
+
+#introText{
+	font-family: Arial;
+	font-size: 40px;
+	text-align: center;
+	margin-left: 25%;
+	margin-top:45%;
+	z-index:2;
+    position: absolute;
+    opacity: 1;
+    background-color: white;
+}
+
+
+

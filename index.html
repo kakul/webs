@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+<!--link rel="stylesheet" type="text/css" href="display.css"/-->
+		<script src ="js/jquery-1.11.1.min.js"></script>
+		<script>
+			Load=0;
+
+			$(document).keydown(function(key){
+				switch(Load){
+					case 0:
+					$(".back").addClass("fade");
+					$("#introText").addClass("fade");
+					break;
+					case 1:
+					$(".naruto").addClass("appear");
+					$(".sasuke").addClass("appear");
+					break;
+					case 2:
+					$("#page-1").addClass("appear");
+					break;
+					case 3:
+					$(".f1").addClass("appear2");
+					break;
+					case 4:
+					$(".f2").addClass("appear3");
+					break;
+					case 5:
+					$(".f3").addClass("appear4");
+					break;
+					case 6:
+					$(".f4").addClass("appear5");
+					break;
+					case 7:
+					$(".f5").addClass("appear5");
+				}
+				
+
+				console.log(Load);
+		        Load+=1;
+			});
+
+
+		</script>
+	</head>
+	<body>
+		<p id="introText" >Naruto Chapter 232:The Valley of End</p>
+		<div id="intro">
+
+			<img src="img/valley.png" class="back"/>
+			<img src="img/naruto.png" class="naruto"/>
+			<img src="img/sasuke.png" class="sasuke"/>
+		</div>
+		<div id="page-1">
+		    
+				<img src="img/1.png" class="f1"/>
+				<img src="img/2.png" class="f2"/>
+				<img src="img/3.png" class="f3"/>
+				<img src="img/4.png" class="f4"/>
+				<img src="img/5.png" class="f5"/>
+
+	
+		</div>
+	</body>
+</html>
