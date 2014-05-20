@@ -5,39 +5,63 @@
 
 }
 
+@keyframes moverevY{
+	0%{transform:translateY(30px);}
+	100%{transform:translateY(10px);}
+}
+
 @keyframes appear{
 	0%{opacity:0;}
 	100%{opacity:1;}
 }
 
 @keyframes movex{
+	0%{ 		
+		transform:translateX(165px);
+		
+	}
+		100%{
+			
+
+			transfrom:translateX(10px);
+		
+			
+		}
+	
+}
+
+@keyframes moverevx{
 	0%{
 		width:50%;
 		height:50%;
-		transform:translateX(165px);
-		opacity: 0;
+		transform:translateX(10px);
+		
 	}
 		100%{
-			width: 100%
+			width: 100%;
 			height:100%;
-			transfrom:translateX(10px);
-			opacity: 1;
-			z-index: 1;
+			transfrom:translateX(165px);
+		
+			
 		}
 	
 }
 
 .appear3 {
-  animation: moveY 2s forwards;
+  animation: moveY 2s forwards,appear 2s forwards;
   
 }
 
+.disappear3 {
+  animation: moverevY 2s forwards,fader 2s forwards;
+  
+}
+
+
 @keyframes moveY {
   0% {
-  	opacity:0;
   	transform: translateY(10px);}
   100% {
-  	opacity:1;
   	transform: translateY(30px);}
 }
 
@@ -48,36 +72,53 @@
 
 .appear{
 	animation:appear 2s forwards;
-	z-index: 1;
+	
 }
 
 .appear2{
 	
-	
-	animation:movex 1s forwards;
+	animation:movex 2s forwards,appear 2s forwards;
+}
+
+.disappear2{
+	animation:moverevX 2s backwards,fader 2s forwards;
 }
 
 .appear4{
-	animation:moveY 1s forwards;
+	animation:magnify 2s forwards,appear 2s forwards;
+}
+.disappear4{
+	animation:revmagnify 2s forwards, fader 2s forwards;
 }
 
-@keyframes drop{
-	0% {opacity:0;
-		transform:translateY(1.0);}
-	50%{transform:scale(1.5);}
-	100%{opacity:1;
+@keyframes magnify{ 
+	0% {transform:scale(1.0);
+		}
+	50%{transform:scale(1.4);}
+	100%{
 		transform:scale:(1.0); }
 }
 
-.appear5{
-	animation:drop 2s forwards;
+@keyframes revmagnify{ 
+	0% {transform:scale(1.0);
+		}
+	50%{transform:scale(1.4);}
+	100%{
+		transform:scale:(1.0); }
 }
+
+
 
 html{
 	width:100%;
 	height:100%;
 	background-color: #000000;
 }
+.disappear
+ {  
+ 	animation:fader 2 forwards;
+
+ 	}
 
 .back{
 	
@@ -130,6 +171,7 @@ html{
 
 
 .f3{
+	
     opacity:0;
     float:left;
     z-index:2;
