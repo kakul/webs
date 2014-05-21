@@ -24,8 +24,6 @@
 			
 
 			transfrom:translateX(10px);
-		
-			
 		}
 	
 }
@@ -47,48 +45,11 @@
 	
 }
 
-.appear3 {
-  animation: moveY 2s forwards,appear 2s forwards;
-  
-}
-
-.disappear3 {
-  animation: moverevY 2s forwards,fader 2s forwards;
-  
-}
-
-
 @keyframes moveY {
   0% {
   	transform: translateY(10px);}
   100% {
   	transform: translateY(30px);}
-}
-
-.fade{
-	animation:fader 2s forwards;
-	
-}
-
-.appear{
-	animation:appear 2s forwards;
-	
-}
-
-.appear2{
-	
-	animation:movex 2s forwards,appear 2s forwards;
-}
-
-.disappear2{
-	animation:moverevX 2s backwards,fader 2s forwards;
-}
-
-.appear4{
-	animation:magnify 2s forwards,appear 2s forwards;
-}
-.disappear4{
-	animation:revmagnify 2s forwards, fader 2s forwards;
 }
 
 @keyframes magnify{ 
@@ -107,19 +68,204 @@
 		transform:scale:(1.0); }
 }
 
+@-webkit-keyframes fader{
+	
+	0%{opacity:1;}
+	100%{opacity:0;}
 
+}
+
+@-webkit-keyframes moverevY{
+	0%{-webkit-transform:translateY(30px);}
+	100%{-webkit-transform:translateY(10px);}
+}
+
+@-webkit-keyframes appear{
+	0%{opacity:0;}
+	100%{opacity:1;}
+}
+
+@-webkit-keyframes movex{
+	0%{ 		
+		-webkit-transform:translateX(165px);
+		
+	}
+		100%{
+			
+
+			-webkit-transfrom:translateX(10px);
+		}
+	
+}
+
+@-webkit-keyframes moverevx{
+	0%{
+		width:50%;
+		height:50%;
+		-webkit-transform:translateX(10px);
+		
+	}
+		100%{
+			width: 100%;
+			height:100%;
+			-webkit-transfrom:translateX(165px);
+		
+			
+		}
+	
+}
+
+@-webkit-keyframes moveY {
+  0% {
+  	-webkit-transform: translateY(10px);}
+  100% {
+  	-webkit-transform: translateY(30px);}
+}
+
+@-webkit-keyframes magnify{ 
+	0% {-webkit-transform:scale(1.0);
+		}
+	50%{-webkit-transform:scale(1.4);}
+	100%{
+		-webkit-transform:scale:(1.0); }
+}
+
+@-webkit-keyframes revmagnify{ 
+	0% {-webkit-transform:scale(1.0);
+		}
+	50%{-webkit-transform:scale(1.4);}
+	100%{
+		-webkit-transform:scale:(1.0); }
+}
+
+@-o-keyframes fader{
+	
+	0%{opacity:1;}
+	100%{opacity:0;}
+
+}
+
+@-o-keyframes moverevY{
+	0%{-o-transform:translateY(30px);}
+	100%{-o-transform:translateY(10px);}
+}
+
+@-o-keyframes appear{
+	0%{opacity:0;}
+	100%{opacity:1;}
+}
+
+@-o-keyframes movex{
+	0%{ 		
+		-o-transform:translateX(165px);
+		
+	}
+		100%{
+			
+
+			-o-transfrom:translateX(10px);
+		}
+	
+}
+
+@-o-keyframes moverevx{
+	0%{
+		width:50%;
+		height:50%;
+		-o-transform:translateX(10px);
+		
+	}
+		100%{
+			width: 100%;
+			height:100%;
+			-o-transfrom:translateX(165px);
+		
+			
+		}
+	
+}
+
+@-o-keyframes moveY {
+  0% {
+  	-o-transform: translateY(10px);}
+  100% {
+  	-o-transform: translateY(30px);}
+}
+
+@-o-keyframes magnify{ 
+	0% {-o-transform:scale(1.0);
+		}
+	50%{-o-transform:scale(1.4);}
+	100%{
+		-o-transform:scale:(1.0); }
+}
+
+@-o-keyframes revmagnify{ 
+	0% {-o-transform:scale(1.0);
+		}
+	50%{-o-transform:scale(1.4);}
+	100%{
+		-o-transform:scale:(1.0); }
+}
+
+.appear3 {
+  animation: moveY 2s forwards,appear 2s forwards;
+  -o-animation: moveY 2s forwards,appear 2s forwards;
+  -webkit-animation: moveY 2s forwards,appear 2s forwards;  
+
+}
+
+.disappear3 {
+  animation: moverevY 2s forwards,fader 2s forwards;
+  -webkit-animation: moverevY 2s forwards,fader 2s forwards;
+  -o-animation: moverevY 2s forwards,fader 2s forwards;
+
+  
+}
+
+.fade,.disappear{
+	animation:fader 2s forwards;
+	-o-animation:fader 2s forwards;
+	-webkit-animation:fader 2s forwards;
+	
+}
+
+.appear{
+	animation:appear 2s forwards;
+	-webkit-animation:appear 2s forwards;
+	-o-animation:appear 2s forwards;
+	
+}
+
+.appear2{
+	
+	animation:movex 2s forwards,appear 2s forwards;
+	-o-animation:movex 2s forwards,appear 2s forwards;
+	-webkit-animation:movex 2s forwards,appear 2s forwards;
+}
+
+.disappear2{
+	animation:moverevX 2s backwards,fader 2s forwards;
+	-o-animation:moverevX 2s backwards,fader 2s forwards;
+	-webkit-animation:moverevX 2s backwards,fader 2s forwards;
+}
+
+.appear4{
+	animation:magnify 2s forwards,appear 2s forwards;
+	-webkit-animation:magnify 2s forwards,appear 2s forwards;
+	-o-animation:magnify 2s forwards,appear 2s forwards;
+}
+.disappear4{
+	animation:revmagnify 2s forwards, fader 2s forwards;
+	-webkit-animation:revmagnify 2s forwards, fader 2s forwards;
+	-o-animation:revmagnify 2s forwards, fader 2s forwards;
+}
 
 html{
 	width:100%;
 	height:100%;
 	background-color: #000000;
 }
-.disappear
- {  
- 	animation:fader 2 forwards;
-
- 	}
-
 .back{
 	
 	width:100%;
