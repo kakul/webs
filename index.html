@@ -9,6 +9,8 @@
 		<script>
 			Load=0;
 
+
+            
 			$(document).keydown(function(key){
 				if(key.keyCode==39)//RIGHT KEY
 					{switch(Load){
@@ -18,6 +20,7 @@
 						$('html,body').animate({scrollTop:0},'slow');
 						$(".back").removeClass("appear");
 						$("#introText").removeClass("appear");
+						
 
 						break;
 						case 1:
@@ -29,31 +32,39 @@
 						case 2:
 						$("#page-1").addClass("appear");
 						$("#page-1").removeClass("fade");
-						
 						break;
 						case 3:
+						pauset();
 						$(".f1").addClass("appear2");
 						$(".f1").removeClass("disappear2");
-
+                        playt();
 						break;
 						case 4:
+						pauset();
 						$(".f2").addClass("appear3");
 						$(".f2").removeClass("disappear3");
 						$('html,body').animate({scrollTop:400},'slow');
+						playt();
 						break;
 						case 5:
+						pauset();
 						$(".f3").addClass("appear3");
 						$(".f3").removeClass("disappear3");
+						playt();
 						break;
 						case 6:
+						pauset();
 						$(".f4").addClass("appear4");
 						$(".f4").removeClass("disappear4");
 						$('html,body').animate({scrollTop:425},'slow');
+						playt();
 						break;
 						case 7:
+						pauset();
 						$(".f5").addClass("appear4");
 						$(".f5").removeClass("disappear4");
-					}
+						playt();
+					};
 					
 
 					console.log(Load);
@@ -68,8 +79,7 @@
 						$("#introText").addClass("appear");
 						$(".back").removeClass("fade");
 						$("#introText").removeClass("fade");
-						$('html,body').animate({scrollTop:0},'slow');
-
+						
 						break;
 						case 1:
 						$(".naruto").addClass("fade");
@@ -107,18 +117,59 @@
 						
 						
 						
-			       }
+			       };
 			       console.log(key.keyCode);
 			       console.log(Load);
 			       if(Load>0)
 			        Load-=1;
 			   }
 
+
+
+     
 				});
+                       
+        audioElement = document.createElement('audio');
+        audioElement.setAttribute('src', 'audio/kim.mp3');
+        audioElement.setAttribute('type','audio/mpeg')
+        audioElement.setAttribute('autoplay', 'autoplay');
+        audioElement.setAttribute('loop','true');
+
+         audioElement2 = document.createElement('audio');
+        audioElement2.setAttribute('src', 'audio/thunder.mp3');
+        audioElement2.setAttribute('type','audio/mpeg')
+        audioElement2.setAttribute('autoplay', 'autoplay');
+        audioElement2.setAttribute('loop','true');
+
+        //audioElement.load()
+      
+        audioElement3 = document.createElement('audio');
+        audioElement3.setAttribute('src', 'audio/sword.mp3');
+        audioElement3.setAttribute('type','audio/mpeg')
+        
+
+        function playt()
+  { 
+  audioElement3.play(); 
+  } 
+
+function pauset()
+  { 
+  audioElement3.load(); 
+  } 
+        
+
+           
+        
+   
 
 
 
 
+		</script>
+		<script>
+
+    
 		</script>
 	</head>
 	<body>
