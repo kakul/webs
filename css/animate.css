@@ -362,5 +362,23 @@ html{
     background-color: white;
 }
 
+#leftc{
+	z-index:3;
+	width:50%;
+	height: 1065px;
+	position:absolute;
+	background-color: white;
+	opacity:0;
+	float:left;
+}
+#rightc{
+	z-index:3;
+	width:50%;
+	height: 1065px;
+	position:absolute;
+	background-color: white;
+	opacity:0;
+	margin-left: 50%
+}
 
 

@@ -8,8 +8,128 @@
 		<script src ="js/jquery-1.11.1.min.js"></script>
 		<script>
 			Load=0;
+            $(document).ready(function () {
+            
+			$("#leftc").click(function(){
+				console.log("YES");
+
+				switch(Load){
+						case 0:
+						$(".back").addClass("fade");
+						$("#introText").addClass("fade");
+						$('html,body').animate({scrollTop:0},'slow');
+						$(".back").removeClass("appear");
+						$("#introText").removeClass("appear");
+						
+
+						break;
+						case 1:
+						$(".naruto").addClass("appear");
+						$(".sasuke").addClass("appear");
+						$(".naruto").removeClass("fade");
+						$(".sasuke").removeClass("fade");
+						break;
+						case 2:
+						$("#page-1").addClass("appear");
+						$("#page-1").removeClass("fade");
+						break;
+						case 3:
+						pauset();
+						$(".f1").addClass("appear2");
+						$(".f1").removeClass("disappear2");
+                        playt();
+						break;
+						case 4:
+						pauset();
+						$(".f2").addClass("appear3");
+						$(".f2").removeClass("disappear3");
+						$('html,body').animate({scrollTop:400},'slow');
+						playt();
+						break;
+						case 5:
+						pauset();
+						$(".f3").addClass("appear3");
+						$(".f3").removeClass("disappear3");
+						playt();
+						break;
+						case 6:
+						pauset();
+						$(".f4").addClass("appear4");
+						$(".f4").removeClass("disappear4");
+						$('html,body').animate({scrollTop:425},'slow');
+						playt();
+						break;
+						case 7:
+						pauset();
+						$(".f5").addClass("appear4");
+						$(".f5").removeClass("disappear4");
+						playt();
+					};
+					
+
+					console.log(Load);
+					if(Load<7)
+			        Load+=1;
 
 
+
+			});
+
+             
+			$('#rightc').click(function(){
+                        switch(Load){
+						case 0:
+						$(".back").addClass("appear");
+						$("#introText").addClass("appear");
+						$(".back").removeClass("fade");
+						$("#introText").removeClass("fade");
+						
+						break;
+						case 1:
+						$(".naruto").addClass("fade");
+						$(".sasuke").addClass("fade");
+						$(".naruto").removeClass("appear");
+						$(".sasuke").removeClass("appear");
+						break;
+						case 2:
+						$("#page-1").addClass("fade");
+						$("#page-1").removeClass("appear");
+						break;
+						case 3:
+						$('html,body').animate({scrollTop:0},'slow');
+						$(".f1").addClass("disappear2");
+						$(".f1").removeClass("appear2");
+						break;
+						case 4:
+						$(".f2").addClass("disappear3");
+						$(".f2").removeClass("appear3");
+						break;
+						case 5:
+						$(".f3").addClass("disappear3");
+						$(".f3").removeClass("appear3");
+
+						break;
+						case 6:
+						$(".f4").addClass("disappear4");
+						$(".f4").removeClass("appear4");
+						$('html,body').animate({scrollTop:400},'slow');
+						break;
+						case 7:
+						$(".f5").removeClass("appear4");
+						$(".f5").addClass("disappear4");
+						
+						
+						
+						
+			       };
+			       console.log(Load);
+			       if(Load>0)
+			        Load-=1;
+				
+
+			});
+           	
+            });
             
 			$(document).keydown(function(key){
 				if(key.keyCode==39)//RIGHT KEY
@@ -189,6 +309,10 @@ function pauset()
 				<img src="img/5.png" class="f5"/>
 
 	
+		</div>
+		<div id="leftc"/>
+		</div>
+		<div id="rightc"/>
 		</div>
 	</body>
 </html>
